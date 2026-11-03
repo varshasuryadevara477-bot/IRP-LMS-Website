@@ -1,0 +1,240 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #003366;
+    background-color: white;
+}
+
+/* Header */
+
+.header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    background-color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img {
+    width: 30px;
+}
+
+.logo h2 {
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #003366;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+nav .active {
+    color: #FE781E;
+    border-bottom: 2px solid #FE781E;
+}
+
+.signin {
+    background-color: white;
+    color: #FE781E;
+    border: 1px solid #FE781E;
+    padding: 9px 22px;
+    border-radius: 7px;
+}
+
+/* Courses Banner */
+
+.banner {
+    min-height: 145px;
+    padding: 25px 8%;
+    display: flex;
+    align-items: center;
+    background-color: #E2F2FD;
+    background-image: url("https://res.cloudinary.com/dwh7w9kz1/image/upload/v1793204868/Minimalist_E-learning_Banner_with_Graduation_Cap_l9jd7u.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+}
+
+.banner-content {
+    width: 60%;
+}
+
+.category {
+    color: #FE781E;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.banner h1 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.banner h1 span {
+    color: #FE781E;
+}
+
+.banner-content p:last-child {
+    font-size: 12px;
+    color: #66809A;
+}
+
+/* Courses */
+
+.courses {
+    padding: 25px 8%;
+    background-color: #F7FCFF;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.course-card {
+    background-color: white;
+    border: 1px solid #D6E9FF;
+    border-radius: 8px;
+    padding: 7px;
+    box-shadow: 0 2px 6px rgba(0, 51, 102, 0.08);
+}
+
+.course-card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 5px;
+}
+
+.course-card h3 {
+    font-size: 13px;
+    margin: 8px 3px 5px;
+}
+
+.course-card p {
+    font-size: 10px;
+    color: #66809A;
+    line-height: 1.5;
+    margin: 0 3px 7px;
+}
+
+/* Explore More Courses */
+
+.explore-more {
+    margin: 0 8% 30px;
+    padding: 18px 25px;
+    background-color: #E2F2FD;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.grid-icon {
+    font-size: 30px;
+    color: #FE781E;
+}
+
+.explore-text {
+    flex: 1;
+}
+
+.explore-text h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.explore-text p {
+    font-size: 11px;
+    color: #66809A;
+}
+
+.explore-more button {
+    background-color: #FE781E;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 4%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .banner {
+        padding: 25px 5%;
+        background-position: right center;
+    }
+
+    .banner-content {
+        width: 65%;
+    }
+
+    .banner h1 {
+        font-size: 20px;
+    }
+
+    .courses {
+        padding: 20px 5%;
+    }
+
+    .course-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .explore-more {
+        margin: 0 5% 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        background-size: auto 70%;
+    }
+
+    .banner-content {
+        width: 70%;
+    }
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    .explore-more {
+        flex-wrap: wrap;
+    }
+}
